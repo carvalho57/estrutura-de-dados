@@ -80,9 +80,20 @@ namespace VetoresArrayLista {
             return index > -1;
         }
 
+        public int UltimoIndice(T elemento) {
+
+            for(int i = Tamanho - 1; i >= 0; i--) {
+                if(this.elementos[i].Equals(elemento)) {
+                    return i;
+                }
+            }
+            return -1;
+        }
+
         private bool EPosicaoInvalida(int posicao) {
             return !(posicao >= 0 && posicao < elementos.Length);
         }
+        
 
         public override string ToString() {
             var str = new StringBuilder();

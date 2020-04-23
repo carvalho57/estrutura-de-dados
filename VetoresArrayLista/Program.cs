@@ -7,7 +7,8 @@ namespace VetoresArrayLista
         static void Main(string[] args) {
             //GenericVetors();
             //UsingArrayList.Run();
-            Exercicios.Exercicio1.Run();
+            //Exercicios.Exercicio1.Run();
+            Exercicios.Exercicio2.Run();
         }
 
         static void GenericVetors() {

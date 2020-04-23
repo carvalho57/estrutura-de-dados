@@ -2,3 +2,8 @@ Exercicio 01
 
 Melhore a classe Lista e implemente o método contém
 , semelhante ao método contains da classe ArrayList
+
+Exercicio 02
+
+Melhore a classe Lista e implemente o método ultimoIndice, semelhante ao método lastIndexOf da
+class Array LIst
