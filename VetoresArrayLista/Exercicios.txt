@@ -1,0 +1,4 @@
+Exercicio 01
+
+Melhore a classe Lista e implemente o método contém
+, semelhante ao método contains da classe ArrayList

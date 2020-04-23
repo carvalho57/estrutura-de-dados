@@ -72,6 +72,10 @@ namespace VetoresArrayLista {
             }
             Tamanho--;
         }
+        public bool Contem(T elemento)  {
+           var index = Busca(elemento);
+            return index > -1;
+        }
 
         private bool EPosicaoInvalida(int posicao) {
             return !(posicao >= 0 && posicao < elementos.Length);

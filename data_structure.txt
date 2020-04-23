@@ -1,0 +1,9 @@
+O que são Estrutura de dados
+
+-> é uma estrutura que armazena e organizadados/informações
+de modo que os dados possam ser acessados e manipulados de forma eficiente
+
+
+Vetor
+
+-> Um vetor (ou array, ou lista) é a estrutura de dados mais simples que existe. Um vetor armazena uma sequência de valores onde todos são do mesmo tipo.
