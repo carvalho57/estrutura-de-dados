@@ -2,12 +2,15 @@ using System;
 using System.Text;
 
 namespace VetoresArrayLista {
-    public class GenericVetor<T> {
+    public class Lista<T> {
         private T[] elementos;
         public int Tamanho{get;private set;}
-        public GenericVetor(int capacidade) {
+        public Lista(int capacidade) {
             this.elementos = new T[capacidade];
             Tamanho = 0;
+        }
+        public Lista() : this(10) {
+            
         }
 
         public bool Adicionar(T elemento) {

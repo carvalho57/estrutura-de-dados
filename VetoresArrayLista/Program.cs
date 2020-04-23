@@ -5,12 +5,13 @@ namespace VetoresArrayLista
     class Program
     {
         static void Main(string[] args) {
-          //GenericVetors();
-            UsingArrayList.Run();
+            //GenericVetors();
+            //UsingArrayList.Run();
+            Exercicios.Exercicio1.Run();
         }
 
         static void GenericVetors() {
-            var vetor = new GenericVetor<string>(2);
+            var vetor = new Lista<string>(2);
             vetor.Adicionar("Gabriel");
             vetor.Adicionar("Feo");
             vetor.Adicionar("De");
