@@ -90,6 +90,10 @@ namespace VetoresArrayLista {
             return index > -1;
         }
 
+        public T Obtem(int posicao) {                        
+            return Busca(posicao);        
+        }
+
         public int UltimoIndice(T elemento) {
 
             for(int i = Tamanho - 1; i >= 0; i--) {

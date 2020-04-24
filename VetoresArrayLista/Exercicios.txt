@@ -13,3 +13,10 @@ Exercicio 03
 Melhore a classe Lista e implemente o método remove
 (T elemento), onde sera possível remover um elemento da
 lista passando o mesmo como parâmetro.
+
+Exercicio 04
+
+Melhore a classe Lista e implemente o método obtem(int posicao),
+onde sera possível obter o elemento dada uma posição do vetor.
+Esse método é semalhante ao método get(int posicao) da classe
+ArrayList
