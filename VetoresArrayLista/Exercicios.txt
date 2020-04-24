@@ -6,4 +6,10 @@ Melhore a classe Lista e implemente o método contém
 Exercicio 02
 
 Melhore a classe Lista e implemente o método ultimoIndice, semelhante ao método lastIndexOf da
-class Array LIst
+class Array List
+
+Exercicio 03
+
+Melhore a classe Lista e implemente o método remove
+(T elemento), onde sera possível remover um elemento da
+lista passando o mesmo como parâmetro.

@@ -8,7 +8,8 @@ namespace VetoresArrayLista
             //GenericVetors();
             //UsingArrayList.Run();
             //Exercicios.Exercicio1.Run();
-            Exercicios.Exercicio2.Run();
+            //Exercicios.Exercicio2.Run();
+            Exercicios.Exercicio3.Run();
         }
 
         static void GenericVetors() {
@@ -23,7 +24,7 @@ namespace VetoresArrayLista
                 Console.WriteLine("Elemento Gabriel Existe");
             } else {
                 Console.WriteLine("Elemento buscado não existe");
-            }
+            }            
             Console.WriteLine(vetor);
 
         }

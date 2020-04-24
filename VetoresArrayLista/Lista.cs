@@ -66,7 +66,7 @@ namespace VetoresArrayLista {
             return -1;
         }
 
-        public void Remove(int posicao) {
+        public void RemoveNaPosicao(int posicao) {
             if(EPosicaoInvalida(posicao))
                 throw new ArgumentException("Posição Inválida");
 
@@ -75,6 +75,16 @@ namespace VetoresArrayLista {
             }
             Tamanho--;
         }
+        public bool Remove(T elemento) {
+            var indiceElemento = Busca(elemento);
+            if(!(indiceElemento > -1)) {
+                return false;
+            }
+
+            RemoveNaPosicao(indiceElemento);
+            return true;
+        }
+
         public bool Contem(T elemento)  {
            var index = Busca(elemento);
             return index > -1;
