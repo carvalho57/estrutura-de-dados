@@ -85,6 +85,13 @@ namespace VetoresArrayLista {
             return true;
         }
 
+        public void Limpar() {
+            for(int i = Tamanho; i >= 0; i--) {
+                elementos[i] = default(T);
+            }
+            Tamanho = 0;
+        }
+
         public bool Contem(T elemento)  {
            var index = Busca(elemento);
             return index > -1;
@@ -110,6 +117,9 @@ namespace VetoresArrayLista {
         
 
         public override string ToString() {
+            if(Tamanho == 0) 
+                return "null";
+            
             var str = new StringBuilder();
             str.Append("[");
             for(int i =0; i < Tamanho-1;i++) {

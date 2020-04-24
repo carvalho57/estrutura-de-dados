@@ -10,7 +10,8 @@ namespace VetoresArrayLista
             //Exercicios.Exercicio1.Run();
             //Exercicios.Exercicio2.Run();
             //Exercicios.Exercicio3.Run();
-            Exercicios.Exercicio4.Run();            
+            //Exercicios.Exercicio4.Run();            
+            Exercicios.Exercicio5.Run();            
         }
 
         static void GenericVetors() {
