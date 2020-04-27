@@ -11,7 +11,9 @@ namespace VetoresArrayLista
             //Exercicios.Exercicio2.Run();
             //Exercicios.Exercicio3.Run();
             //Exercicios.Exercicio4.Run();            
-            Exercicios.Exercicio5.Run();            
+            //Exercicios.Exercicio5.Run();            
+            var exericicio6 = new Exercicios.Exercicio6();
+            exericicio6.Run();
         }
 
         static void GenericVetors() {

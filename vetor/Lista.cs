@@ -39,6 +39,12 @@ namespace VetoresArrayLista {
             return true;
         }
 
+        public void SetarElemento(int posicao, T elemento) {
+            if(!EPosicaoInvalida(posicao)) {
+                elementos[posicao] = elemento;
+            }
+        }
+
         private void AumentaCapacidade() {
             if(this.Tamanho == this.elementos.Length) {
                 T[] elementosNovos = new T[this.elementos.Length * 2];
@@ -65,7 +71,7 @@ namespace VetoresArrayLista {
             }
             return -1;
         }
-
+        
         public void RemoveNaPosicao(int posicao) {
             if(EPosicaoInvalida(posicao))
                 throw new ArgumentException("Posição Inválida");
@@ -110,7 +116,18 @@ namespace VetoresArrayLista {
             }
             return -1;
         }
-
+        public T[] ToArray() {
+            T[] newArray = new T[Tamanho];
+            for(int i = 0; i < Tamanho; i++) {
+                newArray[i] = elementos[i];
+            }
+            return newArray;
+        }
+        public void ForEach(Action<T> action) {
+            for(int i = 0; i < Tamanho; i++) {
+                action(elementos[i]);
+            }
+        }
         private bool EPosicaoInvalida(int posicao) {
             return !(posicao >= 0 && posicao < elementos.Length);
         }
