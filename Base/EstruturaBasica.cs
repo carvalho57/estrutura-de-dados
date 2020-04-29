@@ -2,8 +2,8 @@
 using System.Text;
 namespace Base
 {
-    public class EstruturaBasica<T>
-    {
+    public class EstruturaBasica<T>  
+     {
         protected T[] elementos;
         public int Tamanho{get;protected set;}
         public EstruturaBasica(int capacidade) {
@@ -64,6 +64,9 @@ namespace Base
             Tamanho--;
         }
 
+        public bool EstaVazia() {
+            return Tamanho == 0;
+        }
         
         public override string ToString() {
             if(Tamanho == 0) 
