@@ -1,6 +1,6 @@
 using System;
-using VetoresArrayLista;
-namespace VetoresArrayLista.Exercicios {
+
+namespace vetor.Exercicios {
     public class Exercicio2 {
         public static void Run() {
             var list = new Lista<string>();

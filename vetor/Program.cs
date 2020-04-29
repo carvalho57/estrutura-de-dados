@@ -1,12 +1,15 @@
 ﻿using System;
 
-namespace VetoresArrayLista
+namespace vetor
 {
     class Program
     {
         static void Main(string[] args) {
             //GenericVetors();
             //UsingArrayList.Run();
+
+
+            //Exercicios
             //Exercicios.Exercicio1.Run();
             //Exercicios.Exercicio2.Run();
             //Exercicios.Exercicio3.Run();
@@ -14,8 +17,17 @@ namespace VetoresArrayLista
             //Exercicios.Exercicio5.Run();            
             var exericicio6 = new Exercicios.Exercicio6();
             exericicio6.Run();
-        }
 
+        }
+        static void TesteForEach() {
+            var list = new Lista<string>();
+            list.Adicionar("Brasil");
+            list.Adicionar("Uruguay");
+            list.Adicionar("Paraguay");
+
+            list.ForEach(x => Console.WriteLine(x));
+
+        }
         static void GenericVetors() {
             var vetor = new Lista<string>(2);
             vetor.Adicionar("Gabriel");
@@ -33,7 +45,7 @@ namespace VetoresArrayLista
 
         }
         static void CommumVetor() {
-              Vetor vetor = new Vetor(2);
+            Vetor vetor = new Vetor(2);
         
             vetor.Adicionar("elemento 1");
             vetor.Adicionar("elemento 2");
@@ -60,4 +72,3 @@ namespace VetoresArrayLista
         }
     }
 }
-

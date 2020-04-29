@@ -1,42 +1,12 @@
 using System;
-using System.Text;
-
-namespace VetoresArrayLista {
-    public class Lista<T> {
-        private T[] elementos;
-        public int Tamanho{get;private set;}
-        public Lista(int capacidade) {
-            this.elementos = new T[capacidade];
-            Tamanho = 0;
+using Base;
+namespace vetor {
+    public class Lista<T> : EstruturaBasica<T>{
+        
+        public Lista(int capacidade) : base(capacidade) {
         }
-        public Lista() : this(10) {
+        public Lista() : base(10) {
             
-        }
-
-        public bool Adicionar(T elemento) {
-            AumentaCapacidade();            
-            if(Tamanho < elementos.Length) {
-                this.elementos[Tamanho] = elemento;
-                Tamanho++;
-                return true;
-            }
-            
-            return false;
-        }
-
-   
-        public bool Adicionar(int posicao,T elemento) {
-            if(EPosicaoInvalida(posicao))
-                return false;
-            AumentaCapacidade();
-            //mover todos os elementos
-            for(int i = Tamanho; i > posicao; i--) {
-                elementos[i] = elementos[i - 1];
-            }
-            this.elementos[posicao] = elemento;
-            this.Tamanho++;
-
-            return true;
         }
 
         public void SetarElemento(int posicao, T elemento) {
@@ -45,17 +15,14 @@ namespace VetoresArrayLista {
             }
         }
 
-        private void AumentaCapacidade() {
-            if(this.Tamanho == this.elementos.Length) {
-                T[] elementosNovos = new T[this.elementos.Length * 2];
-
-                for(int i = 0; i < this.Tamanho; i++) {
-                    elementosNovos[i] = elementos[i];
-                }
-                this.elementos = elementosNovos;
-            }
+        public new bool Adicionar(T elemento) {
+            return base.Adicionar(elemento);
         }
-        
+
+
+        public new bool Adicionar(int posicao,T elemento) {
+           return base.Adicionar(posicao,elemento);
+        }
         
         public T Busca(int posicao) {
             if(EPosicaoInvalida(posicao))
@@ -72,15 +39,6 @@ namespace VetoresArrayLista {
             return -1;
         }
         
-        public void RemoveNaPosicao(int posicao) {
-            if(EPosicaoInvalida(posicao))
-                throw new ArgumentException("Posição Inválida");
-
-            for(int i= posicao; i < Tamanho -1 ; i++) {
-                elementos[i] = elementos[i + 1];
-            }
-            Tamanho--;
-        }
         public bool Remove(T elemento) {
             var indiceElemento = Busca(elemento);
             if(!(indiceElemento > -1)) {
@@ -91,13 +49,19 @@ namespace VetoresArrayLista {
             return true;
         }
 
+        public new void RemoveNaPosicao(int posicao) {
+            base.RemoveNaPosicao(posicao);
+        }
+
+
+
         public void Limpar() {
             for(int i = Tamanho; i >= 0; i--) {
                 elementos[i] = default(T);
             }
             Tamanho = 0;
         }
-
+      
         public bool Contem(T elemento)  {
            var index = Busca(elemento);
             return index > -1;
@@ -127,25 +91,6 @@ namespace VetoresArrayLista {
             for(int i = 0; i < Tamanho; i++) {
                 action(elementos[i]);
             }
-        }
-        private bool EPosicaoInvalida(int posicao) {
-            return !(posicao >= 0 && posicao < elementos.Length);
-        }
-        
-
-        public override string ToString() {
-            if(Tamanho == 0) 
-                return "null";
-            
-            var str = new StringBuilder();
-            str.Append("[");
-            for(int i =0; i < Tamanho-1;i++) {
-                str.Append($"{elementos[i]}, ");
-            }
-            str.Append($"{elementos[Tamanho-1]}");
-
-            str.Append("]");
-            return str.ToString();
         }
     }
 }

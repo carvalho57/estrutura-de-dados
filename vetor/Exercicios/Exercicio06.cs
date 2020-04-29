@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
-namespace VetoresArrayLista.Exercicios {
+using vetor;
+namespace vetor.Exercicios {
     public class Exercicio6 {
 
         private Lista<Contato> Contatos {get;set;}

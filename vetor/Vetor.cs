@@ -1,7 +1,7 @@
 using System;
 using System.Text;
 
-namespace VetoresArrayLista {
+namespace vetor {
     public class Vetor {
         private string[] elementos;
         public int Tamanho{get;private set;}

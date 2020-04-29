@@ -1,7 +1,7 @@
 using System;
 using System.Diagnostics.CodeAnalysis;
 
-namespace VetoresArrayLista{
+namespace vetor{
     public class Contato : IEquatable<Contato> {
         public string Nome {get; private set;}
         public string Telefone {get;private set;}
