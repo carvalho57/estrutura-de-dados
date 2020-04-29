@@ -7,9 +7,21 @@ namespace pilha
         static void Main(string[] args)
         {
             var pilha = new Pilha<int>();
-            C
+            Console.Write("Informe a quantidade de elementos: ");
+            var elemento = int.Parse(Console.ReadLine());
+            for(int i = 0; i < elemento; i++) {
+                pilha.Empilha(i);
+            }
+            Console.WriteLine("Verificando se a pilha está vazia");
+            Console.WriteLine($"Está vazia {pilha.EstaVazia()}");
+            Console.WriteLine("Verificando os elementos da pilha");
             Console.WriteLine(pilha);
-            Console.WriteLine(pilha.Tamanho);
+            Console.WriteLine($"Quantos elementos tem na pilha:  {pilha.Tamanho}");
+            Console.WriteLine($"Qual o elemento do TOPO {pilha.Topo()}");
+            Console.WriteLine("Retirando o ultimo elmento");
+            Console.WriteLine($"Elemento {pilha.Tamanho}: {pilha.Desempilhar()}");
+            Console.WriteLine(pilha);
+            
         }
     }
 }
