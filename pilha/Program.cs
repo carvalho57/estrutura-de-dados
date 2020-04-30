@@ -6,7 +6,11 @@ namespace pilha
     {
         static void Main(string[] args)
         {
-            var pilha = new Pilha<int>();
+            Exercicios();
+        }
+
+        static void UsingPilha() {
+             var pilha = new Pilha<int>();
             Console.Write("Informe a quantidade de elementos: ");
             var elemento = int.Parse(Console.ReadLine());
             for(int i = 0; i < elemento; i++) {
@@ -22,6 +26,11 @@ namespace pilha
             Console.WriteLine($"Elemento {pilha.Tamanho}: {pilha.Desempilhar()}");
             Console.WriteLine(pilha);
             
+        }
+
+        static void Exercicios() {
+            //new pilha.Exercicios.Exercicio1().Run();
+            new pilha.Exercicios.Exercicio2().Run();
         }
     }
 }
