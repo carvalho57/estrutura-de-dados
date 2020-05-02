@@ -1,7 +1,8 @@
 using System;
+using System.Diagnostics.CodeAnalysis;
 using Base;
 namespace pilha {
-    public class Pilha<T> : EstruturaBasica<T> {
+    public class Pilha<T> : EstruturaBasica<T>, IEquatable<Pilha<T>> {
 
         public Pilha() : base() {
 
@@ -26,6 +27,20 @@ namespace pilha {
             if(EstaVazia())
                 return default(T);
             return this.elementos[Tamanho - 1];
+        }
+
+        public bool Equals(Pilha<T> outro)
+        {
+            if(outro == null) 
+                return false;
+            if(outro.Tamanho != this.Tamanho)
+                return false;        
+            for(int i = 0; i < outro.Tamanho; i++) {
+                if(!this.elementos[i].Equals( outro.elementos[i] ) ) {
+                    return false;
+                }
+            }
+            return true;
         }
     }
 }
