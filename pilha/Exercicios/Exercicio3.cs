@@ -21,12 +21,12 @@ namespace pilha.Exercicios {
             do {           
                 ApresentarOpcoes();     
                 if(!int.TryParse(Console.ReadLine(),out opcao)) {
-                    EscreverMensagemErro("A opção informada deve ser um número!");                    
+                    Utilitario.EscreverMensagem("A opção informada deve ser um número!");                    
                     continue;
                 }
 
                 if( (opcaoValida = ExecutarOpcao(opcao)) == false ) {
-                   EscreverMensagemErro("A opção informada não é válida!");
+                   Utilitario.EscreverMensagem("A opção informada não é válida!");
                     continue;
                 }
                 
@@ -60,16 +60,8 @@ namespace pilha.Exercicios {
                     return false;                  
            }
            return  true;
-        }
-        public void EscreverMensagemErro(string mensagem, int tempoMensagemSegundo = 3) {
-            Console.WriteLine("-----------------------------");
-            Console.WriteLine(mensagem);
-            Console.WriteLine("-----------------------------");
-            PausarExecucao(tempoMensagemSegundo);
-        }
-        public void PausarExecucao(int segundo) {
-            Thread.Sleep(segundo * 1000);
-        }
+        }      
+     
         public void ElementoTopo() {                
             var livro = Livros.Topo();
             Console.WriteLine("Livro no Topo da Pilha - >");
@@ -77,26 +69,22 @@ namespace pilha.Exercicios {
         }
         public void Empilhar() {                               
           Console.WriteLine("Insira as informações do livro: ");
-          var nome = LerInformacao("Informe o nome");
-          var isbn = LerInformacao("Informe o ISBN");
+          var nome = Utilitario.LerInformacao("Informe o nome");
+          var isbn = Utilitario.LerInformacao("Informe o ISBN");
           DateTime lancamento = new DateTime();
           if( !DateTime.TryParse(
-                LerInformacao("Informe o lancamento no formato (YYYY/MM/DD)"),
+                Utilitario.LerInformacao("Informe o lancamento no formato (YYYY/MM/DD)"),
                 out lancamento) ) {
 
-                EscreverMensagemErro("Informe a data de lançamento no formato");
+                Utilitario.EscreverMensagem("Informe a data de lançamento no formato");
                 return;
           }
 
-          var autor = LerInformacao("Informe o nome do autor");          
+          var autor = Utilitario.LerInformacao("Informe o nome do autor");          
           Livros.Empilha(new Livro(nome,isbn,lancamento,autor));
           Console.Clear();
           Console.WriteLine($"Livro empilhado com sucesso\n {Livros.Topo()}");
 
-        }
-        public string LerInformacao(string mensagem) {
-            Console.Write($"{mensagem}: ");
-            return Console.ReadLine();
         }
         public void Desempilhar() {            
             Console.WriteLine("Desempilhando o último elemento");

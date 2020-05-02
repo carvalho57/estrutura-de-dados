@@ -27,12 +27,12 @@ namespace pilha.Exercicios  {
             do {           
                 ApresentarOpcoes();     
                 if(!int.TryParse(Console.ReadLine(),out opcao)) {
-                    EscreverMensagem("A opção informada deve ser um número!");                    
+                    Utilitario.EscreverMensagem("A opção informada deve ser um número!");                    
                     continue;
                 }
 
                 if((opcaoEscolhida = ExecutarOpcao(opcao)).Equals(Opcoes.Sair)) {
-                    EscreverMensagem("Volte Sempre!",2);
+                    Utilitario.EscreverMensagem("Volte Sempre!",2);
                     break;
                 } 
 
@@ -69,20 +69,13 @@ namespace pilha.Exercicios  {
                     Console.WriteLine("Obrigado pelo seu tempo!");
                     return Opcoes.Sair;             
                 default:
-                    EscreverMensagem("A opção informada não é válida!");
+                    Utilitario.EscreverMensagem("A opção informada não é válida!");
                     return Opcoes.Invalida;                  
            }
            return  Opcoes.Valida;
         }
-        public void EscreverMensagem(string mensagem, int tempoMensagemSegundo = 3) {
-            Console.WriteLine("-----------------------------");
-            Console.WriteLine(mensagem);
-            Console.WriteLine("-----------------------------");
-            PausarExecucao(tempoMensagemSegundo);
-        }
-        public void PausarExecucao(int segundo) {
-            Thread.Sleep(segundo * 1000);
-        }
+    
+     
         public void ElementoTopo() {                
             var livro = Livros.Peek();
             Console.WriteLine("Livro no Topo da Pilha - >");
@@ -90,27 +83,24 @@ namespace pilha.Exercicios  {
         }
         public void Empilhar() {                               
           Console.WriteLine("Insira as informações do livro: ");
-          var nome = LerInformacao("Informe o nome");
-          var isbn = LerInformacao("Informe o ISBN");
+          var nome = Utilitario.LerInformacao("Informe o nome");
+          var isbn = Utilitario.LerInformacao("Informe o ISBN");
           DateTime lancamento = new DateTime();
           if( !DateTime.TryParse(
-                LerInformacao("Informe o lancamento no formato (YYYY/MM/DD)"),
+                Utilitario.LerInformacao("Informe o lancamento no formato (YYYY/MM/DD)"),
                 out lancamento) ) {
 
-                EscreverMensagem("Informe a data de lançamento no formato");
+                Utilitario.EscreverMensagem("Informe a data de lançamento no formato");
                 return;
           }
 
-          var autor = LerInformacao("Informe o nome do autor");          
+          var autor = Utilitario.LerInformacao("Informe o nome do autor");          
           Livros.Push(new Livro(nome,isbn,lancamento,autor));
           Console.Clear();
           Console.WriteLine($"Livro empilhado com sucesso\n {Livros.Peek()}");
 
         }
-        public string LerInformacao(string mensagem) {
-            Console.Write($"{mensagem}: ");
-            return Console.ReadLine();
-        }
+  
         public void Desempilhar() {            
             Console.WriteLine("Desempilhando o último elemento");
             Console.WriteLine(Livros.Pop());

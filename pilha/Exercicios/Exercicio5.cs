@@ -6,7 +6,7 @@ namespace pilha.Exercicios {
     public class Exercicio5 {
         public void Run() {
             Console.WriteLine("Teste do Palíndromo");
-            var palavra = LerInformacao("Informe uma palavra: ");
+            var palavra = Utilitario.LerInformacao("Informe uma palavra: ");
             Console.WriteLine("Agora vamos verificar se é um Palíndromo");
             if(VerificarPalindromo(palavra)){
                 Console.WriteLine("É um Palindromo");
@@ -26,11 +26,6 @@ namespace pilha.Exercicios {
             }
 
             return primeiraMetade.Equals(segundaMetade);
-        }
-
-        private string LerInformacao(string mensagem)     {
-            Console.Write(mensagem);
-            return Console.ReadLine();
         }
     }
 }
