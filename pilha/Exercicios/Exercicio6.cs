@@ -5,21 +5,7 @@ Exercício 06
 Exercício 06 
 Desafio dos símbolos balanceados Escreva um programa para verificar se uma expressão matemática tem os parênteses agrupados de forma correta, isto é: 
     (1) se o número de parênteses à esquerda e à direita são iguais e;
-    (2) se todo parêntese aberto é seguido posteriormente por um fechamento de parêntese. Veja alguns exemplos:
-
- As expressões 
-    ((A+B) ou A+B(
-        violam a condição 1 -
-As expressões 
-    )A+B( – C  ou  (A+B)) – (C + D 
-        violam a condição 2 - 
-A expressão ((A+B)+D) está ok 
-(A+B)) – (C -> (A+B))–(C  -> ())( 
-)A+B( – C -> )A+B(–C -> )(
-((A+B) -> ((A+B) - > (()
-A+B( - > A+B( -> (
-(A + (B+C)) -> (()) 
-Soma de parentes abertos tem que ser igual a dos fecha parenteses
+    (2) se todo parêntese aberto é seguido posteriormente por um fechamento de parêntese. Veja alguns exemplos
 */
 namespace pilha.Exercicios {
     public class Exercicio6 {
