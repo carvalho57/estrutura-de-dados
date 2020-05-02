@@ -31,7 +31,8 @@ namespace pilha
         static void Exercicios() {
             //new pilha.Exercicios.Exercicio1().Run();
             //new pilha.Exercicios.Exercicio2().Run();
-            new pilha.Exercicios.Exercicio3().Run();
+            //new pilha.Exercicios.Exercicio3().Run();
+            new pilha.Exercicios.Exercicio4().Run();
         }
     }
 }
