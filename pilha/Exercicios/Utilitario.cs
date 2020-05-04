@@ -1,7 +1,5 @@
 using System;
 using System.Threading;
-
-
 namespace pilha.Exercicios {
 
     public static class Utilitario {
