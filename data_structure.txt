@@ -6,4 +6,13 @@ de modo que os dados possam ser acessados e manipulados de forma eficiente
 
 Vetor
 
--> Um vetor (ou array, ou lista) é a estrutura de dados mais simples que existe. Um vetor armazena uma sequência de valores onde todos são do mesmo tipo.
+-> Um vetor (ou array, ou lista) é a estrutura de dados mais simples que existe. 
+Um vetor armazena uma sequência de valores onde todos são do MESMO TIPO.
+Pense numa lista de compra, como os elementos se relacionam a sua ordem e assim por diante.
+    
+Pilha ou Stack
+-> Um vetor que tem o comportamento (LIFO Last In First Out)
+-> Quando pensar em pilha, lembre da pilha de pratos e do comportamento que tem na hora de lavar
+a louça
+
+
