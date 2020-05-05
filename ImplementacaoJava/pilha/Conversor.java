@@ -7,6 +7,7 @@ public class Conversor {
         Scanner entrada = new Scanner(System.in);
 
         int numero = entrada.nextInt();
+        entrada.close();
         PilhaEstatica binarios = new PilhaEstatica(10);
         int resto;
 
