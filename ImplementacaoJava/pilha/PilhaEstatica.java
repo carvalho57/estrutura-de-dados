@@ -1,4 +1,3 @@
-
 public class PilhaEstatica {
     private int valores[];
     private int topo;
