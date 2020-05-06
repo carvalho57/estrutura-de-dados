@@ -1,4 +1,4 @@
-public class PilhaEstatica {
+public class PilhaEstatica  {
     private int valores[];
     private int topo;
 

@@ -1,14 +1,8 @@
-import java.util.Scanner;
 
 public class Conversor {
     public static void main(String args[])  {
-        System.out.println("Conversor Decimal para Binário");
-        System.out.print("Entre com um numero: ");
-        Scanner entrada = new Scanner(System.in);
-
-        int numero = entrada.nextInt();
-        entrada.close();
-        PilhaEstatica binarios = new PilhaEstatica(10);
+        int numero = Integer.parseInt(args[0]);
+        PilhaDinamica binarios = new pilhaDinamica();
         int resto;
 
         while(numero != 0)  {
