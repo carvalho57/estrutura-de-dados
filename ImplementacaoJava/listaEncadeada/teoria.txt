@@ -1,0 +1,12 @@
+Por que?
+
+1) Não temos como saber antecipadamente o tamanho
+2) Não pretendemos redimensionar o vetor
+3) Conseguimos alocar memória sob demanda no nosso sistema
+
+
+    [ ] -> [ ] -> [ ] -> [ ]
+
+Lista Encadeada
+* Estrutura auto-referenciável
+    Aponta para si mesma
