@@ -1,20 +1,34 @@
 import java.util.HashMap;
 import java.util.LinkedHashSet;
 
+/*Como executar
+    java MainApp quantidadeValores Algoritmo > saida.txt
+    Algoritmo
+    1 - Bubble Sort
+    2 - Selection Sort
+    3 -
+    */
 public class MainApp {
     private static AlgoritmosOrdenacao algo;
     public static void main(String args[]) {
         int[] values = gerarValores(Integer.parseInt(args[0]));
         algo = new AlgoritmosOrdenacao();   
-
-        System.out.println("Valores Gerados");     
-        algo.mostrarVetor(values);
-        
-        System.out.println("\nBuble Sort");        
-        algo.setVetor(values.clone());
-        algo.bubleSort();
-        algo.mostrarVetor();
-        
+        algo.setVetor(values);
+        switch(Integer.parseInt(args[1])) {
+            case 1:
+                System.out.println("\nBubble Sort");        
+                algo.bubleSort();
+                algo.mostrarVetor();
+                break;
+            case 2:
+                System.out.println("\nSelection Sort");                
+                algo.selectionSort();
+                algo.mostrarVetor();
+                break;
+            default:
+                System.out.println("\nInforme um valor válido");                
+                break;
+        }
     }
 
     private static int[] gerarValores(int value) {
