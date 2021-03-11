@@ -4,6 +4,11 @@ namespace ordenacao
 {
     public partial class Sort
     {
+        /*
+            Dividir - Conquistar - Juntar(merge)
+            O algoritmo consiste em quebrar o vetor pela metadade até a sua 
+            unidade, e depois ir juntando e ordenando essas partes.
+        */
         public static void MergeSort(int[] array)
         {
             MergeSort(array, 0, array.Length - 1);
